@@ -6,8 +6,8 @@ import uz.coder.shoppinglist.presentation.ui.MainActivity
 import uz.coder.shoppinglist.presentation.fr.ShopItemFragment
 import dagger.BindsInstance
 import dagger.Component
-
-@Component(modules = [ComponentModule::class, DataModule::class, VievModelModule::class])
+@ApplicationScope
+@Component(modules = [DomainModule::class, DataModule::class, VievModelModule::class])
 interface AppComponent {
     fun injectApp(app: App)
     fun injectMainAc(mainActivity: MainActivity)

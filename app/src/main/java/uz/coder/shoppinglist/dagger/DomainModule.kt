@@ -7,7 +7,7 @@ import dagger.Binds
 import dagger.Module
 
 @Module
-interface ComponentModule {
+interface DomainModule {
 
     @Binds
     fun bindsShopItemRepo(repo: ShopListItemRepositoryImpl): ShopItemRepository

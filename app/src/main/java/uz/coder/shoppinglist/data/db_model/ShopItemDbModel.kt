@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import javax.inject.Inject
 
 @Entity(tableName = "shop_items")
-data class ShopItemDbModel @Inject constructor(
+data class ShopItemDbModel (
         @PrimaryKey(autoGenerate = true)
         val id: Int,
         val name: String,

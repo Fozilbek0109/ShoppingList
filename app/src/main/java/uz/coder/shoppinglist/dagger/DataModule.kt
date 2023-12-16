@@ -7,6 +7,10 @@ import dagger.Provides
 
 @Module
 class DataModule {
+
     @Provides
-    fun provideosAppDatabase(context: Context): AppDatabase = AppDatabase.getInstance(context)
+    @ApplicationScope
+    fun provideosAppDatabase(context: Context): AppDatabase {
+      return AppDatabase.getInstance(context)
+    }
 }
